@@ -196,22 +196,93 @@ function ejer13() {
 
 //Ejercicio14
 function ejer14() {
-    //mirar inclusion de archivos
+    
 }
 
 //Ejercicio15
 function ejer15() {
-    
+    var n = prompt("Ingrese numero: ");
+    var numeros = [];
+    numeros[0] = 0;
+    numeros[1] = 1;
+
+    for(let i = 2; i < n; i++) {
+        numeros[i] = numeros[i - 2] + numeros[i - 1];
+    }
+
+    console.log(numeros);
 }
 //Ejercicio16
 function ejer16() {
+    var n = prompt("Ingrese un numero: ");
+    var n1 = parseInt(n);
+    var numeros = [];
+    var ini = 2;
+    var pertenece = false;
+    numeros[0] = 0;
+    numeros[1] = 1;
+    numeros[ini] = numeros[ini - 2] + numeros[ini -1]
+
+    while(numeros[ini] <= n1) {
+        ini++
+        numeros[ini] = numeros[ini - 2] + numeros[ini -1];
+    }
+
+    numeros.forEach(element => {
+        if(element == n1) {
+            pertenece = true;
+        }
+    });
+
+    if (pertenece) {
+        console.log("Pertenece a la sucesion");
+    } else {
+        console.log("NO pertenece");
+    }
+
     
 }
 //Ejercicio17
 function ejer17() {
-    
+    var n = prompt("Ingrese un numero: ");
+    var n1 = parseInt(n);
+    var numeros = [];
+    var ini = 2;
+    var pertenece = false;
+    numeros[0] = 0;
+    numeros[1] = 1;
+    numeros[ini] = numeros[ini - 2] + numeros[ini -1]
+
+    while(numeros[ini] <= n1) {
+        ini++
+        numeros[ini] = numeros[ini - 2] + numeros[ini -1];
+    }
+
+    numeros.forEach(element => {
+        if(element == n1) {
+            console.log(numeros.indexOf(element));
+        }
+    })
 }
 //Ejercicio18
 function ejer18() {
-    
+    var n = prompt("Ingrese un numero: ");
+    var n1 = parseInt(n);
+    var numeros = [];
+    var ini = 2;
+    var pertenece = false;
+    numeros[0] = 0;
+    numeros[1] = 1;
+    numeros[ini] = numeros[ini - 2] + numeros[ini -1]
+
+    while(numeros[ini] <= n1) {
+        ini++
+        numeros[ini] = numeros[ini - 2] + numeros[ini -1];
+    }
+
+    numeros.forEach(element => {
+        if(element == n1) {
+            console.log("Anterior: " + numeros[numeros.indexOf(element) - 1] + " Posterior: " + numeros[numeros.indexOf(element) + 1]);
+        }
+    })
 }
