@@ -319,7 +319,12 @@ function ejer18() {
 
     numeros.forEach(element => {
         if(element == n1) {
+            pertenece = true;
             alert("Anterior: " + numeros[numeros.indexOf(element) - 1] + "\nPosterior: " + numeros[numeros.indexOf(element) + 1]);
         }
-    })
+    });
+
+    if(pertenece == false) {
+        alert("El numero no pertence a la sucesion");
+    }
 }
