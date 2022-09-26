@@ -1,79 +1,97 @@
 //Ejercicio1
+//Visualizar los 10 primeros números naturales.
 function ejer1() {
-    for (let i = 0; i < 10; i++){
-        console.log(i);
+    var arr1 = [];
+    for (let i = 1; i <= 10; i++){
+        arr1.push(i);
     }
+
+    alert(arr1);
 }
 
 //Ejercicio2
+//Visualizar los 10 primeros números pares.
 function ejer2() {
+    arr1 = [];
+
     for (let i = 1; i <= 20; i++) {
         if(i % 2 == 0) {
-            console.log(i);
+            arr1.push(i);
         }
     }
+
+    alert(arr1);
 }
 
 //Ejercicio3
+//Visualizar la media de los 10 primeros números naturales.
 function ejer3() {
     var suma = 0;
 
-    for (let i = 0; i < 10; i++ ){
+    for (let i = 1; i <= 10; i++ ){
         suma += i;
     }
 
-    console.log(suma/10);
+    alert(suma/10);
 }
 
 //Ejercicio4
+//Visualizar los N primeros números naturales
 function ejer4() {
     var n = prompt("Ingresa el numero limite: ");
-    
-    for(let i = 0; i < n; i++) {
-        console.log(i);
+    var arr1 = [];
+
+    for(let i = 1; i <= n; i++) {
+        arr1.push(i);
     }
+
+    alert(arr1);
 }
 
 //Ejercicio5
+// Visualizar la suma de los N primeros números naturales
 function ejer5() {
     var n = prompt("Ingresa el numero limite: ");
     var suma = 0;
 
-    for(let i = 0; i < n; i++) {
+    for(let i = 1; i <= n; i++) {
         suma += i;
     }
 
-    console.log(suma);
+    alert(suma);
 }
 
 //Ejercicio6
+//Visualizar la media de los N primeros números naturales.
 function ejer6() {
     var n = prompt("Ingresa el numero limite: ");
     var suma = 0;
 
-    for(let i = 0; i < n; i++) {
+    for(let i = 1; i <= n; i++) {
         suma += i;
     }
 
-    console.log(suma/n);
+    alert(suma/n);
 }
 
 //Ejercicio7
+//Hacer 4, 5 y 6 en el mismo ejercicio
 function ejer7() {
     var n = prompt("Ingresa el numero limite: ");
     var suma = 0;
+    var arr1 = [];
 
     console.log("Numeros dados: ")
-    for(let i = 0; i < n; i++) {
+    for(let i = 1; i <= n; i++) {
         suma += i;
-        console.log(i);
+        arr1.push(i);
     }
 
-    console.log("Suma de los numeros: " + suma);
-    console.log("Media de los numeros: " + (suma/n));
+    alert("Numeros dados: " + arr1 + "\nSuma de los numeros: " + suma + "\n Media de los numeros: " + (suma/n));
 }
 
 //Ejercicio8
+//Visualizar si 327 es un número primo
 function ejer8() {
     var n = 327;
     var divisor = 0;
@@ -87,13 +105,14 @@ function ejer8() {
     }
 
     if(divisor > 2) {
-        console.log("El numero no es primo");
+        alert("El numero no es primo");
     } else {
-        console.log("El numero es primo");
+        alert("El numero es primo");
     }
 }
 
 //Ejercicio9
+//Visualizar si un número N es un número primo.
 function ejer9() {
     var n = prompt("Ingresa el numero: ");
     var divisor = 0;
@@ -107,14 +126,17 @@ function ejer9() {
     }
 
     if(divisor > 2) {
-        console.log("El numero no es primo");
+        alert("El numero no es primo");
     } else {
-        console.log("El numero es primo");
+        alert("El numero es primo");
     }
 }
 
 //Ejercicio10
+//Visualizar los 10 primeros números primos
 function ejer10() {
+    var arr1 = [];
+
     for (var i = 1; i <= 10; i++) {
         divisor = 0;
 
@@ -127,16 +149,20 @@ function ejer10() {
         }
 
         if(divisor <= 2) {
-            console.log(i);
+            arr1.push(i);
         }
     }
+
+    alert(arr1);
 }
 
 //Ejercicio11
+//Visualizar los N primeros números primos, su suma y su media
 function ejer11() {
     var n = prompt("Ingrese el numero: ");
     var suma = 0;
-    
+    var arr1 = [];
+
     for (var i = 1; i <= n; i++) {
         divisor = 0;
 
@@ -150,15 +176,16 @@ function ejer11() {
 
         if(divisor <= 2) {
             suma += i;
-            console.log(i);
+            arr1.push(i);
         }
     }
 
-    console.log("Suma: " + suma);
-    console.log("Media: " + (suma/2));
+    alert("Numeros: " + arr1 + "\nSuma: " + suma + "\nMedia: " + (suma/2));
 }
 
 //Ejercicio12
+//Visualizar la media de una secuencia de números introducidos por el usuario. Para
+//saber cuándo finalizar se introduce un *
 function ejer12() {
     var n = prompt("Ingrese un numero: ");
     var suma = 0;
@@ -169,14 +196,15 @@ function ejer12() {
 
         media++;
         suma += n1;
-        console.log("Suma: " + suma);
-        console.log("Media: " + (suma/media));
+        alert("Suma: " + suma + "\nMedia: " + (suma/media));
 
         n = prompt("Ingrese otro numero: ");
     }
 }
 
 //Ejercicio13
+//El 12 pero visualizar en diferentes líneas los números introducidos por el usuario y su
+//media.
 function ejer13() {
     var n = prompt("Ingrese un numero: ");
     var suma = 0;
@@ -187,19 +215,20 @@ function ejer13() {
 
         media++;
         suma += n1;
-        console.log("Suma: " + suma);
-        console.log("Media: " + (suma/media));
+        alert("Suma: " + suma + "\nMedia: " + (suma/media));
 
         n = prompt("Ingrese otro numero: ");
     }
 }
 
 //Ejercicio14
+//
 function ejer14() {
     
 }
 
 //Ejercicio15
+//Visualizar los N primero términos de la sucesión de Fibonacci.
 function ejer15() {
     var n = prompt("Ingrese numero: ");
     var numeros = [];
@@ -210,9 +239,10 @@ function ejer15() {
         numeros[i] = numeros[i - 2] + numeros[i - 1];
     }
 
-    console.log(numeros);
+    alert(numeros);
 }
 //Ejercicio16
+// Visualizar si un número N pertenece a la sucesión de Fibonacci.
 function ejer16() {
     var n = prompt("Ingrese un numero: ");
     var n1 = parseInt(n);
@@ -235,14 +265,15 @@ function ejer16() {
     });
 
     if (pertenece) {
-        console.log("Pertenece a la sucesion");
+        alert("Pertenece a la sucesion");
     } else {
-        console.log("NO pertenece");
+        alert("NO pertenece");
     }
 
     
 }
 //Ejercicio17
+//Visualizar la posición que ocupa un número N en la sucesión de Fibonacci
 function ejer17() {
     var n = prompt("Ingrese un numero: ");
     var n1 = parseInt(n);
@@ -260,11 +291,17 @@ function ejer17() {
 
     numeros.forEach(element => {
         if(element == n1) {
-            console.log(numeros.indexOf(element));
+            pertenece = true;
+            alert(numeros.indexOf(element));
         }
-    })
+    });
+
+    if(pertenece == false) {
+        alert("El numero no pertence a la sucesion");
+    }
 }
 //Ejercicio18
+//Visualizar los términos anterior y posterior a un número N en la sucesión de Fibonacci
 function ejer18() {
     var n = prompt("Ingrese un numero: ");
     var n1 = parseInt(n);
@@ -282,7 +319,7 @@ function ejer18() {
 
     numeros.forEach(element => {
         if(element == n1) {
-            console.log("Anterior: " + numeros[numeros.indexOf(element) - 1] + " Posterior: " + numeros[numeros.indexOf(element) + 1]);
+            alert("Anterior: " + numeros[numeros.indexOf(element) - 1] + "\nPosterior: " + numeros[numeros.indexOf(element) + 1]);
         }
     })
 }
