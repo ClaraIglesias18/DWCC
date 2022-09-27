@@ -14,7 +14,7 @@ function ejer1() {
 function ejer2() {
     arr1 = [];
 
-    for (let i = 1; i <= 20; i++) {
+    for (let i = 2; i <= 20; i++) {
         if(i % 2 == 0) {
             arr1.push(i);
         }
@@ -79,15 +79,14 @@ function ejer6() {
 function ejer7() {
     var n = prompt("Ingresa el numero limite: ");
     var suma = 0;
-    var arr1 = [];
+    var salida = "";
 
-    console.log("Numeros dados: ")
     for(let i = 1; i <= n; i++) {
         suma += i;
-        arr1.push(i);
+        salida += i + " ";
     }
 
-    alert("Numeros dados: " + arr1 + "\nSuma de los numeros: " + suma + "\n Media de los numeros: " + (suma/n));
+    alert("Numeros dados: " + salida + "\nSuma de los numeros: " + suma + "\nMedia de los numeros: " + (suma/n));
 }
 
 //Ejercicio8
@@ -135,7 +134,7 @@ function ejer9() {
 //Ejercicio10
 //Visualizar los 10 primeros números primos
 function ejer10() {
-    var arr1 = [];
+    var salida = "";
 
     for (var i = 1; i <= 10; i++) {
         divisor = 0;
@@ -149,11 +148,11 @@ function ejer10() {
         }
 
         if(divisor <= 2) {
-            arr1.push(i);
+            salida += i + " ";
         }
     }
 
-    alert(arr1);
+    alert(salida);
 }
 
 //Ejercicio11
@@ -161,7 +160,15 @@ function ejer10() {
 function ejer11() {
     var n = prompt("Ingrese el numero: ");
     var suma = 0;
-    var arr1 = [];
+    var salida = "";
+    var cont = 2;
+
+    while(cont <= n) {
+
+        for(var i = 2; i <= )
+
+        cont++;
+    }
 
     for (var i = 1; i <= n; i++) {
         divisor = 0;
@@ -176,11 +183,11 @@ function ejer11() {
 
         if(divisor <= 2) {
             suma += i;
-            arr1.push(i);
+            salida += i + " ";
         }
     }
 
-    alert("Numeros: " + arr1 + "\nSuma: " + suma + "\nMedia: " + (suma/2));
+    alert("Numeros: " + salida + "\nSuma: " + suma + "\nMedia: " + (suma/2));
 }
 
 //Ejercicio12
@@ -190,13 +197,15 @@ function ejer12() {
     var n = prompt("Ingrese un numero: ");
     var suma = 0;
     var media = 0;
+    var salida = "";
 
     while(n != "*") {
         var n1 = parseInt(n);
 
         media++;
         suma += n1;
-        alert("Suma: " + suma + "\nMedia: " + (suma/media));
+        salida += n1 + " ";
+        alert("Numeros: " + salida + "\nSuma: " + suma + "\nMedia: " + (suma/media));
 
         n = prompt("Ingrese otro numero: ");
     }
@@ -209,13 +218,15 @@ function ejer13() {
     var n = prompt("Ingrese un numero: ");
     var suma = 0;
     var media = 0;
+    var salida = "";
 
     while(n != "*") {
         var n1 = parseInt(n);
 
         media++;
         suma += n1;
-        alert("Suma: " + suma + "\nMedia: " + (suma/media));
+        salida += n1 + " ";
+        alert("Numeros: " + "\nSuma: " + suma + "\nMedia: " + (suma/media));
 
         n = prompt("Ingrese otro numero: ");
     }
