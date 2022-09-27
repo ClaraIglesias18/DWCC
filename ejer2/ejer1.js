@@ -10,8 +10,8 @@ while(entrada != "*") {
 
         var numero = parseInt(entrada);
 
-        if(Number.isNaN(numero)) {
-            alert("Tienes que introdcuir un numero entero");
+        if(isNaN(numero)) {
+            alert("Tienes que introducir un numero entero");
         } else {
             suma += numero;
             salida += numero + "";
