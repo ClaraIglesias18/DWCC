@@ -163,12 +163,12 @@ function ejer11() {
     var salida = "";
     var cont = 2;
 
-    while(cont <= n) {
+    //while(cont <= n) {
 
-        for(var i = 2; i <= )
+      //  for(var i = 2; i <= )
 
-        cont++;
-    }
+        //cont++;
+    //}
 
     for (var i = 1; i <= n; i++) {
         divisor = 0;
@@ -217,19 +217,20 @@ function ejer12() {
 function ejer13() {
     var n = prompt("Ingrese un numero: ");
     var suma = 0;
-    var media = 0;
+    var cont = 0;
     var salida = "";
 
     while(n != "*") {
         var n1 = parseInt(n);
 
-        media++;
+        cont++;
         suma += n1;
         salida += n1 + " ";
-        alert("Numeros: " + "\nSuma: " + suma + "\nMedia: " + (suma/media));
 
         n = prompt("Ingrese otro numero: ");
     }
+
+    alert("Numeros: " + salida + "\nSuma: " + suma + "\nMedia: " + (suma/cont));
 }
 
 //Ejercicio14
