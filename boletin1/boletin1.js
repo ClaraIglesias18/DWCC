@@ -244,7 +244,7 @@ function ejer14() {
 function ejer15() {
     var n = prompt("Ingrese numero: ");
     var numeros = [];
-    numeros[0] = 0;
+    numeros[0] = 1;
     numeros[1] = 1;
 
     for(let i = 2; i < n; i++) {
@@ -259,15 +259,15 @@ function ejer16() {
     var n = prompt("Ingrese un numero: ");
     var n1 = parseInt(n);
     var numeros = [];
-    var ini = 2;
+    var i = 2;
     var pertenece = false;
-    numeros[0] = 0;
+    numeros[0] = 1;
     numeros[1] = 1;
-    numeros[ini] = numeros[ini - 2] + numeros[ini -1]
+    numeros[i] = numeros[i - 2] + numeros[i - 1];
 
-    while(numeros[ini] <= n1) {
-        ini++
-        numeros[ini] = numeros[ini - 2] + numeros[ini -1];
+    while(numeros[i] <= n1) {
+        i++;
+        numeros[i] = numeros[i - 2] + numeros[i - 1];
     }
 
     numeros.forEach(element => {
@@ -290,21 +290,22 @@ function ejer17() {
     var n = prompt("Ingrese un numero: ");
     var n1 = parseInt(n);
     var numeros = [];
-    var ini = 2;
+    var i = 2;
     var pertenece = false;
-    numeros[0] = 0;
+    numeros[0] = 1;
     numeros[1] = 1;
-    numeros[ini] = numeros[ini - 2] + numeros[ini -1]
+    numeros[i] = numeros[i - 2] + numeros[i - 1];
 
-    while(numeros[ini] <= n1) {
-        ini++
-        numeros[ini] = numeros[ini - 2] + numeros[ini -1];
+    while(numeros[i] <= n1) {
+        i++;
+        numeros[i] = numeros[i - 2] + numeros[i - 1];
     }
 
     numeros.forEach(element => {
         if(element == n1) {
             pertenece = true;
-            alert(numeros.indexOf(element));
+            alert("Numeros: " + numeros
+                + "\nEl numero pertence a la posicion: " + numeros.indexOf(element));
         }
     });
 
@@ -318,21 +319,23 @@ function ejer18() {
     var n = prompt("Ingrese un numero: ");
     var n1 = parseInt(n);
     var numeros = [];
-    var ini = 2;
+    var i = 2;
     var pertenece = false;
-    numeros[0] = 0;
+    numeros[0] = 1;
     numeros[1] = 1;
-    numeros[ini] = numeros[ini - 2] + numeros[ini -1]
+    numeros[i] = numeros[i - 2] + numeros[i - 1];
 
-    while(numeros[ini] <= n1) {
-        ini++
-        numeros[ini] = numeros[ini - 2] + numeros[ini -1];
+    while(numeros[i] <= n1) {
+        i++;
+        numeros[i] = numeros[i - 2] + numeros[i - 1];
     }
 
     numeros.forEach(element => {
         if(element == n1) {
             pertenece = true;
-            alert("Anterior: " + numeros[numeros.indexOf(element) - 1] + "\nPosterior: " + numeros[numeros.indexOf(element) + 1]);
+            alert("Numeros: " + numeros 
+                    + "\nAnterior: " + numeros[numeros.indexOf(element) - 1] 
+                    + "\nPosterior: " + numeros[numeros.indexOf(element) + 1]);
         }
     });
 
