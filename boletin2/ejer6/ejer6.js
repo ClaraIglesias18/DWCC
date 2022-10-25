@@ -1,4 +1,4 @@
-var alumnos = {
+var alumno = {
     101: "Pepe",
     102: "Juan",
     103: "Clara",
@@ -14,11 +14,11 @@ var modulos = {
     DWCC: "Bea",
     EIE: "Marta",
     SERI: "Julio",
-    ADSO: "Julio",
-    PROG: "Julio",
+    ADSO: "Raul",
+    PROG: "Juan",
 };
 
-var alumnos = {
+var asignaturas = {
     101: ["DAW", "DIW", "EIE"],
     102: ["ADSO", "PROG", "DWCC"],
     103: ["DIW", "SERI"],
@@ -35,17 +35,35 @@ var horario = {
     quinta: ["SERI", "DIW", "DWCS"],
     sexta: ["EIE", "DWCC", "DWCC"],
 };
-
 var salida = "";
 var entrada = prompt("Indica el alumno del que quieres saber informacion: ");
 
-if(isNaN(entrada)) {
-    salida += "Tienes que introducir un numero no texto"
-} if(!(alumnos.includes(entrada))){
-    salida += "El alumno no pertence al centro"
-} else {
-    //crear un array bidimensional con las posiciones de las asiganturas
-    //en el array de horario
-
-    
+if (isNaN(entrada)) {
+    salida += "Tienes que introducir un numero de alumno";
 }
+if (alumno[entrada] == undefined) {
+    salida += "El alumno no pertenece al centro";
+} else {
+    salida += "El alumno " + alumno[entrada] + " pertenece al centro\n";
+    salida += "-------------------------------\n";
+    salida += "HORARIO\n";
+
+    for (var clave in horario) {
+        salida += clave + "    | ";
+        horario[clave].forEach((element) => {
+            var pertenece = false;
+            for (let i = 0; i < asignaturas[entrada].length; i++) {
+                if (element == asignaturas[entrada][i]) {
+                    pertenece = true;
+                }
+            }
+            if (pertenece) {
+                salida += element + "(" + modulos[element] + ")  |";
+            } else {
+                salida += " --- | ";
+            }
+        });
+        salida += "\n";
+    }
+}
+alert(salida);
