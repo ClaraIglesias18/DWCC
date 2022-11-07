@@ -9,7 +9,7 @@ var alumno = {
 
 var modulos = {
     DAW: "Julio",
-    DIW: "Jose Maria",
+    DIW: "Jose",
     DWCS: "Luis",
     DWCC: "Bea",
     EIE: "Marta",
@@ -28,21 +28,20 @@ var asignaturas = {
 };
 
 var horario = {
-    primera: ["DAW", "DAW", "EIE"],
-    segunda: ["DAW", "DIW", "DWCC"],
-    tercera: ["ADSO", "PROG", "PROG"],
-    cuarta: ["SERI", "PROG", "DWCS"],
-    quinta: ["SERI", "DIW", "DWCS"],
-    sexta: ["EIE", "DWCC", "DWCC"],
+    primera: new Array("DAW", "DAW", "EIE"),
+    segunda: new Array("DAW", "DIW", "DWCC"),
+    tercera: new Array("ADSO", "PROG", "PROG"),
+    cuarta: new Array("SERI", "PROG", "DWCS"),
+    quinta:new Array("SERI", "DIW", "DWCS"),
+    sexta: new Array("EIE", "DWCC", "DWCC")
 };
 var salida = "";
 var entrada = prompt("Indica el alumno del que quieres saber informacion: ");
 
 if (isNaN(entrada)) {
     salida += "Tienes que introducir un numero de alumno";
-}
-if (alumno[entrada] == undefined) {
-    salida += "El alumno no pertenece al centro";
+} else if(alumno[entrada] == undefined) {
+    salida += "El alummo no pertenece al centro";
 } else {
     salida += "El alumno " + alumno[entrada] + " pertenece al centro\n";
     salida += "-------------------------------\n";
@@ -50,17 +49,13 @@ if (alumno[entrada] == undefined) {
 
     for (var clave in horario) {
         salida += clave + "    | ";
+
         horario[clave].forEach((element) => {
-            var pertenece = false;
-            for (let i = 0; i < asignaturas[entrada].length; i++) {
-                if (element == asignaturas[entrada][i]) {
-                    pertenece = true;
-                }
-            }
-            if (pertenece) {
+
+            if (asignaturas[entrada].includes(element)) {
                 salida += element + "(" + modulos[element] + ")  |";
             } else {
-                salida += " --- | ";
+                salida += " ----------- | ";
             }
         });
         salida += "\n";
