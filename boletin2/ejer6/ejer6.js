@@ -23,7 +23,7 @@ var asignaturas = {
     102: ["ADSO", "PROG", "DWCC"],
     103: ["DIW", "SERI"],
     104: ["DWCS", "PROG", "DIW"],
-    105: ["ADSO", "DIW"],
+    105: ["ADSO", "DIW"], 
     106: ["PROG", "SERI"],
 };
 
@@ -61,4 +61,60 @@ if (isNaN(entrada)) {
         salida += "\n";
     }
 }
+
+function matriculado(alumno, modulo) {
+    let salida;
+    if(asignaturas[alumno].includes(modulo)) {
+        salida = "El alumno " + alumno + " esta matriculado en " + modulo;
+    } else {
+        salida =  "El allumno " + alumno + " no esta matriculado en " + modulo;
+    }
+
+    return salida;
+}
+
+function diaClase(alumno, dia) {
+    let salida;
+    let clase = false;
+    for (const clave in horario) {
+        if(alumno.includes(horario[clave][dia])) {
+            clase = true;
+        }
+    }
+
+    if(clase) {
+        salida = "Tiene clase";
+    } else {
+        salida = "No tiene clase";
+    }
+
+    return salida;
+}
+
+function numeroAlumnos(asignatura) {
+    let cont = 0;
+    
+    for (const clave in asignaturas) {
+        if(asignaturas[clave].includes(asignatura)) {
+            cont++;
+        }
+    }
+
+    return "Hay un total de " + cont + "alumno/s en esa asignatura";
+}
+
 alert(salida);
+
+var alumno = prompt("Dime el alumno que quieras saber si esta matriculado: ");
+var modulo = prompt("Dime el modulo en el que quieras buscar: ");
+
+alert(matriculado(alumno, modulo));
+
+var alummo = prompt("dime el alumno que quieras saber informacion: ");
+var dia = prompt("Indica el dia: ");
+
+alert(diaClase(alummo, dia));
+
+var asignatura = prompt("Indica la asignatura para contar el numero de alumnos: ");
+
+alert(numeroAlumnos(asignatura));
