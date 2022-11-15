@@ -1,6 +1,7 @@
 function mayorMenor(numeros) {
-    let mayor = 0;
+    let mayor = numeros[0];
     let menor = numeros[0];
+    let array = []; 
 
     numeros.forEach(element => {
         if(element > mayor) {
@@ -11,9 +12,11 @@ function mayorMenor(numeros) {
         }
     });
 
-    return "Numero mayor: " + mayor 
-         +  "\nNumero menor: " + menor;
+    array.push(mayor, menor);
+
+    return array;
 }
 
 var numeros = [3, 50, 6, 12, 0, 13, 5, 7, 33, 5, 77, 66];
-alert(mayorMenor(numeros));
+alert("El numero mayor es: " + mayorMenor(numeros)[0]
+        + "El numero menor es: " + mayorMenor(numeros)[1]);

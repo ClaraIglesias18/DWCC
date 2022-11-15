@@ -1,4 +1,4 @@
-function fibonacci() {
+function fibonacci(n) {
     let n1 = parseInt(n);
     let numeros = [];
     let i = 2;
@@ -18,11 +18,7 @@ function fibonacci() {
         }
     });
 
-    if (pertenece) {
-        return "Pertenece a la sucesion";
-    } else {
-        return "NO pertenece";
-    }
+    return pertenece;
 }
 
 var n = prompt("Ingrese un numero: ");
