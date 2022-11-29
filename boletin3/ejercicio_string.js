@@ -10,17 +10,12 @@ var separarApellido;
 var entrada = prompt(
     "Introduce nombre y apellidos con el siguiente formato: apellidos, nombre"
 );
-//\s elimina espacios "+" de forma consecutiva \g lo repite a lo largo del string
-//var sinEspacios = entrada.replace(/\s+/g, "");
+
+//elimina los espacios el inicio y del final
 var sinEspacios = entrada.trim();
+
+//separa la entrada por la coma creando un array con los dos elementos
 var nombreApellido = sinEspacios.split(",");
-
-function iniciales(nombre, apellido) {
-    let separarNombre = nombre.split(" ");
-    let separarApellido = apellido.split(" ");
-    
-
-}
 
 if (entrada.search(",") == -1) {
     salida = "No has introducido una coma de separacion";
@@ -33,6 +28,7 @@ if (entrada.search(",") == -1) {
     apellidoMin = apellido.toLowerCase();
     nombreMay = nombre.toUpperCase();
     apellidoMay = apellido.toUpperCase();
+    
 
     salida =
         "III.   Antes de depurar: " +
@@ -53,16 +49,7 @@ if (entrada.search(",") == -1) {
         "\nVIII.   " +
         nombre.length +
         "\nIX.   " +
-        (apellido.length - 2) +
-        "\nX.   " +
-        separarNombre[0].charAt(0) +
-        "." +
-        separarNombre[1].charAt(0) +
-        "." +
-        separarApellido[0].charAt(0) +
-        "." +
-        separarApellido[1].charAt(0) +
-        "\nXI.  " 
+        (apellido.length - 2) 
         ;
 }
 
