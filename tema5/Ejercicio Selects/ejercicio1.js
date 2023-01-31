@@ -9,6 +9,7 @@ var todosIzq = document.getElementById("regresaTodos");
 
 window.addEventListener("load",cargarAficiones,false);
 
+//carga todas las aficiones del array
 function cargarAficiones() {
 
     for (let i = 0; i < aficiones.length; i++) {
@@ -25,41 +26,37 @@ function cargarAficiones() {
 
 }
 
+
+//arreglar la carga de los elementos
 mayorQue.addEventListener("click", () => {
 
     var seleccionadas = aficionesCargadas.selectedOptions;
 
     console.log(seleccionadas.length);
 
-    for(let i = 0; i <= seleccionadas.length; i++) {
+    for(let i = seleccionadas.length; i <= 0; i--) {
         aficionesSeleccionadas.append(seleccionadas[i]);
     }
 
 });
 
 
-
-function pasaSeleccionados(seleccionadas) {
-
-    
-
-    for(let i = 0; i < seleccionadas.length; i++) {
-        aficionesSeleccionadas.append(seleccionadas[i]);;
-    }
-}
-
-function regresaSeleccionados() {
-
-}
+//pasa elementos seleccionados a la seccion de aficiones seleccionadas
+menorQue.addEventListener("click", () => {
 
 
+
+});
+
+
+//pasa todos los elementos a la seccion de aficiones seleccionadas
 todosDerecha.addEventListener("click", () => {
 
     var seleccionadas = aficionesCargadas.options;
 
     console.log(seleccionadas);
 
-    for (let i = 0; i < seleccionadas.length; i++) {
+    for (let i = seleccionadas.length; i >= 0; i--) {
         
         aficionesSeleccionadas.append(seleccionadas[i]);
         
@@ -68,9 +65,11 @@ todosDerecha.addEventListener("click", () => {
 
 });
 
-function regresaTodos() {
 
-}
+//regresa todos los elementos
+todosIzq.addEventListener("click", () => {
+
+});
 
 
 
