@@ -78,3 +78,4 @@ var subdelegado = prompt("Indica el nombre del subdelegado: ");
 
 var grupo1 = new Grupo(nombre, tutor, delegado, subdelegado);
 alert(grupo1.toString());
+

@@ -10,23 +10,21 @@ var propietarios = [
 
 ]
 
-
-
 function mayuscula(texto) {
-    let transforacion = "";
-    let textoSinEspacios = texto.trim(); 
-    let inicial = textoSinEspacios.slice(0,1);
-    let cuerpo = textoSinEspacios.slice(1);
 
-    transforacion += inicial.toUpperCase();
-    transforacion += cuerpo.toLowerCase();
-    
-    return transforacion;
+    return texto[0].toUpperCase()+texto.substring(1).toLowerCase();
 }
 
-function Popietario(nombre, tipoMascota, edadMascota, nombreMascota) {
+function Propietario(nombre, tipoMascota, edadMascota, nombreMascota) {
     this.nombre = nombre;
     this.tipoMascota = tipoMascota;
     this.edadMascota = edadMascota;
     this.nombreMascota = nombreMascota;
+}
+
+function crearPropietarios(mascotas) {
+    var propietarios = [];
+    mascotas.forEach(element => {
+        propietarios.push(new Propietario(element[3], element[0], element[1], element[2]))
+    });
 }
