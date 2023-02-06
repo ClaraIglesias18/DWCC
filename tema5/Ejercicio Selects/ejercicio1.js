@@ -26,42 +26,44 @@ function cargarAficiones() {
 
 }
 
-
-//arreglar la carga de los elementos
+//pasa elementos seleccionados a aficiones selececcionadas
 mayorQue.addEventListener("click", () => {
 
+    var cont = aficionesSeleccionadas.length;
     var seleccionadas = aficionesCargadas.selectedOptions;
 
-    console.log(seleccionadas.length);
-
-    for(let i = seleccionadas.length; i <= 0; i--) {
-        aficionesSeleccionadas.append(seleccionadas[i]);
+    for(let i = seleccionadas.length; i >= 0; i--) {
+        aficionesSeleccionadas.append(seleccionadas[i], aficionesSeleccionadas.length + cont);
+        cont--;
     }
 
 });
 
 
-//pasa elementos seleccionados a la seccion de aficiones seleccionadas
+//regresa elementos seleccionados a aficiones cargadas
 menorQue.addEventListener("click", () => {
 
+    var cont = aficionesCargadas.length;
+    var seleccionadas = aficionesSeleccionadas.selectedOptions;
 
+    for(let i = seleccionadas.length; i >= 0; i--) {
+        aficionesCargadas.append(seleccionadas[i], aficionesCargadas.length - cont);
+        cont++;
+    }
 
 });
 
 
-//pasa todos los elementos a la seccion de aficiones seleccionadas
+//pasa todos los elementos
 todosDerecha.addEventListener("click", () => {
 
+    var cont = aficionesSeleccionadas.length;
     var seleccionadas = aficionesCargadas.options;
 
-    console.log(seleccionadas);
-
-    for (let i = seleccionadas.length; i >= 0; i--) {
-        
-        aficionesSeleccionadas.append(seleccionadas[i]);
-        
+    for(let i = seleccionadas.length; i >= 0; i--) {
+        aficionesSeleccionadas.append(seleccionadas[i], aficionesSeleccionadas.length - cont);
+        cont++;
     }
-    
 
 });
 
@@ -69,6 +71,14 @@ todosDerecha.addEventListener("click", () => {
 //regresa todos los elementos
 todosIzq.addEventListener("click", () => {
 
+    var cont = aficionesCargadas.length;
+    var seleccionadas = aficionesSeleccionadas.options;
+
+    for(let i = seleccionadas.length; i >= 0; i--) {
+        aficionesCargadas.append(seleccionadas[i], aficionesSeleccionadas.length - cont);
+        cont++;
+    }
+    
 });
 
 
